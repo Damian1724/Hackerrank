@@ -21,11 +21,11 @@ problem url: https://www.hackerrank.com/challenges/insert-a-node-at-the-tail-of-
 """
 
 def Insert(head, data):
-    aux=head
-    a=Node(data)
-    if head==None:return a
+    pointer=head
+    aux_node=Node(data)
+    if head==None:return aux_node
     else:
         while head.next is not None:
             head=head.next
-        head.next=a
-        return aux
+        head.next=aux_node
+        return pointer
