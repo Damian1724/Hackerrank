@@ -20,20 +20,20 @@ problem url: https://www.hackerrank.com/challenges/get-the-value-of-the-node-at-
 
  return back the node data of the linked list in the below method.
 """
-
-def GetNode(head, position):
-    i=-1
-    aux=head
+def get_lenght(aux):
+    lenght=0
     while aux.next is not None:
-        i+=1
+        lenght+=1
         aux=aux.next
-    i+=1
-    i=i-position
-    j=-1
-    while j < i:
-        j+=1
-        if j==i:return head.data
+    return lenght
+        
+def GetNode(head, position):
+    aux=head
+    lenght=get_lenght(aux)
+    lenght=lenght-position
+    j=0
+    while j <= lenght:
+        if j==lenght:return head.data
         head=head.next
+        j+=1
         
-        
-    
