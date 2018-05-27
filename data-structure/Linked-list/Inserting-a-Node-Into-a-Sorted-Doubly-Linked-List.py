@@ -4,6 +4,9 @@ source: HackerRank(https://www.hackerrank.com)
 problem name: Algorithms >Data Structures>linked lists > Inserting a Node Into a Sorted Doubly Linked List
 problem url: https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem
 cost of the algorithm: N
+ */ 
+ 
+ 
 """
  Insert a node into a sorted doubly linked list
  head could be None as well for empty list
