@@ -1,5 +1,5 @@
 /*
-uthor: Damian Cruz
+Author: Damian Cruz
 source: HackerRank(https://www.hackerrank.com)
 problem name: Algorithms >Data Structures>linked lists >Cicle Detection
 problem url: https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem
