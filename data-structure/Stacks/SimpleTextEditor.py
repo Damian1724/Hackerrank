@@ -1,5 +1,5 @@
 /*
-uthor: Damian Cruz
+Author: Damian Cruz
 source: HackerRank(https://www.hackerrank.com)
 problem name: Algorithms >Data Structures>Stacks>SimpleTextEditor
 pronlem url: https://www.hackerrank.com/challenges/simple-text-editor/problem
