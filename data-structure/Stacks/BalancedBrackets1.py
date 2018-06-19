@@ -8,6 +8,7 @@ cost of algorihtm: N
 
 
 cases=int(input())
+d={")":"(","}":"{","]":"["}
 for i in range(cases):
     s=input()
     lista=[]
@@ -19,10 +20,10 @@ for i in range(cases):
                 if len(lista)==0:
                     valor = False
                     break
-                if j==")" and lista[len(lista)-1]!= "(" or j=="}" and lista[len(lista)-1]!= "{" or j=="]" and lista[len(lista)-1]!= "[":
+                if d[j]!=lista[-1]:
                     valor=False
                     break
-                if j==")" and lista[len(lista)-1]== "(" or j=="}" and lista[len(lista)-1]== "{" or j=="]" and lista[len(lista)-1]== "[":
+                if d[j]==lista[-1]:
                     del lista[len(lista)-1]
         if valor and len(lista)==0:print("YES")
         else:print("NO")
