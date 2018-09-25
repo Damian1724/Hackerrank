@@ -4,6 +4,9 @@
 
 import time
 import random
+import sys
+
+sys.setrecursionlimit(100000)
 
 def countingSort(arr):
     answer = [0] * (max(arr)+1)
@@ -11,7 +14,7 @@ def countingSort(arr):
         answer[i] += 1
 
     lista = []
-    for i in range(100):
+    for i in range(len(answer)):
         for j in range(answer[i]):
             lista.append(i)
 
@@ -22,7 +25,6 @@ def insertionSort(n, arr):
             if arr[i] < arr[j]:
                 arr.insert(j,arr[i])
                 arr.pop(i+1)
-
 
 
 def quicksort(arr,low,high):
@@ -42,11 +44,21 @@ def partition(arr,low,high):
 
     return border
 
+
+def bubblesort(arr):
+    for i in range(len(arr)):
+        k=1
+        for j in range(len(arr)-1):
+            if arr[j] > arr[k]:
+                arr[j],arr[k]=arr[k],arr[j]
+            k+=1
+
+            
 arr=[]
-n=10
+n=1000
 for i in range(3):
     for j in range(n):
-        arr.append(random.randrange(1,1000000000,2))
+        arr.append(random.randrange(0,n+1))
 
     print("For an array on lenght",n)
     start=time.time()
@@ -60,5 +72,9 @@ for i in range(3):
     start=time.time()
     countingSort(arr)
     end=time.time()
-    print("Time of execution for the CountingSort is",end-start,"seconds\n")
-    n*=10
+    print("Time of execution for the CountingSort is",end-start,"seconds")
+    start=time.time()
+    bubblesort(arr)
+    end=time.time()
+    print("Time of execution for BubbleSort is",end-start,"seconds\n")
+    n*=5
